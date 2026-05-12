@@ -1,0 +1,19 @@
+{
+  "name": "ironclad-digital-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ironclad Digital booking API — handles lead persistence, email (Resend), SMS (Twilio), and CRM (HubSpot).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "~2.8.5",
+    "dotenv": "~16.4.5",
+    "express": "~4.19.2",
+    "express-rate-limit": "~7.3.1",
+    "helmet": "~7.1.0",
+    "resend": "~3.2.0"
+  }
+}

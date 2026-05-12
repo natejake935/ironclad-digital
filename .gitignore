@@ -1,0 +1,34 @@
+# --- Environment / Secrets ---
+# NEVER commit these — they contain API keys and credentials
+.env
+.env.local
+.env.production
+.env.*.local
+
+# --- Node.js ---
+node_modules/
+server/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Build output (add if you add a build step later) ---
+dist/
+build/
+.cache/

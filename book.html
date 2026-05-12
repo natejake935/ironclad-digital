@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a free strategy call with Ironclad Digital. Tell us about your contractor business and we'll show you how to build a predictable job pipeline." />
+  <title>Book A Strategy Call — Ironclad Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-book">
+
+  <!-- =================== NAV =================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__brand" aria-label="Ironclad Digital home">
+        <span class="nav__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L4 7v9c0 7.2 5.1 13.4 12 14 6.9-.6 12-6.8 12-14V7L16 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M10 14h12M10 18h12M16 10v12" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+          </svg>
+        </span>
+        <span class="nav__name">IRONCLAD <span class="nav__name--accent">DIGITAL</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#system">Our System</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why">About</a>
+        <a href="index.html#results">Results</a>
+        <a href="index.html">Blog</a>
+      </nav>
+
+      <a href="#bookForm" class="btn btn--primary nav__cta">Book A Strategy Call
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =================== BOOK HERO =================== -->
+  <section class="book-hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container book-hero__inner">
+      <div class="eyebrow">SCHEDULE YOUR CALL</div>
+      <h1 class="book-hero__title">
+        Let's Build Your <span class="text-blue">Job Pipeline.</span>
+      </h1>
+      <p class="book-hero__sub">
+        Tell us about your business in 60 seconds. We'll review your current setup and show you exactly where you're losing leads—and how to fix it.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== FORM SECTION =================== -->
+  <section class="book-section">
+    <div class="container book-grid">
+
+      <!-- Left: Form -->
+      <div class="book-form-wrap">
+        <form
+          id="bookForm"
+          class="book-form"
+          novalidate
+          data-form="booking"
+          aria-describedby="bookFormStatus"
+        >
+          <!-- Honeypot for bot protection (hidden from real users) -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+
+          <fieldset class="book-form__group">
+            <legend class="book-form__legend">Your Business</legend>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="firstName">First Name <span class="req">*</span></label>
+                <input id="firstName" name="firstName" type="text" required autocomplete="given-name" />
+              </div>
+              <div class="field">
+                <label for="lastName">Last Name <span class="req">*</span></label>
+                <input id="lastName" name="lastName" type="text" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="businessName">Business Name <span class="req">*</span></label>
+              <input id="businessName" name="businessName" type="text" required autocomplete="organization" />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 000-0000" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="book-form__group">
+            <legend class="book-form__legend">About Your Operation</legend>
+
+            <div class="field">
+              <label for="serviceType">Service Type <span class="req">*</span></label>
+              <div class="select-wrap">
+                <select id="serviceType" name="serviceType" required>
+                  <option value="">Select your trade…</option>
+                  <option value="electrical">Electrical</option>
+                  <option value="remodeling">Home Remodeling</option>
+                  <option value="plumbing">Plumbing</option>
+                  <option value="hvac">HVAC</option>
+                  <option value="roofing">Roofing</option>
+                  <option value="general-contractor">General Contractor</option>
+                  <option value="landscaping">Landscaping</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="monthlyLeads">Monthly Leads (Current)</label>
+                <div class="select-wrap">
+                  <select id="monthlyLeads" name="monthlyLeads">
+                    <option value="">Select range…</option>
+                    <option value="0-10">0–10</option>
+                    <option value="11-25">11–25</option>
+                    <option value="26-50">26–50</option>
+                    <option value="51-100">51–100</option>
+                    <option value="100+">100+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="serviceArea">Primary Service Area</label>
+                <input id="serviceArea" name="serviceArea" type="text" placeholder="e.g. San Diego, CA" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="challenge">Biggest Lead Generation Challenge</label>
+              <textarea id="challenge" name="challenge" rows="4" placeholder="e.g. Missed calls, inconsistent leads, weak website conversion…"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="book-form__group">
+            <legend class="book-form__legend">Preferences</legend>
+            <div class="field">
+              <span class="field__label">Preferred Contact Method</span>
+              <div class="radio-row">
+                <label class="radio">
+                  <input type="radio" name="contactMethod" value="phone" checked />
+                  <span>Phone</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="contactMethod" value="text" />
+                  <span>Text</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="contactMethod" value="email" />
+                  <span>Email</span>
+                </label>
+              </div>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              <span>I agree to receive a follow-up text and email from Ironclad Digital regarding my strategy call. <span class="req">*</span></span>
+            </label>
+          </fieldset>
+
+          <div class="book-form__actions">
+            <button type="submit" class="btn btn--primary btn--lg" id="bookSubmit">
+              <span class="btn__label">Book My Strategy Call</span>
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <div class="book-form__micro">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              We respond within 1 business hour. Your info is private.
+            </div>
+          </div>
+
+          <div id="bookFormStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- Success state (shown after submission) -->
+        <div class="book-success" id="bookSuccess" hidden>
+          <div class="book-success__icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 class="book-success__title">Request Received.</h2>
+          <p class="book-success__text">
+            Your details are in. We'll reach out within <strong>1 business hour</strong> via your preferred contact method to lock in your strategy call.
+          </p>
+          <a href="index.html" class="btn btn--ghost">Return Home</a>
+        </div>
+      </div>
+
+      <!-- Right: Trust sidebar -->
+      <aside class="book-aside">
+        <div class="book-aside__card">
+          <div class="eyebrow">WHAT TO EXPECT</div>
+          <h3 class="book-aside__title">A 30-Minute Working Call</h3>
+          <ul class="book-aside__list">
+            <li>
+              <span class="ba-num">1</span>
+              <div>
+                <strong>Diagnostic Review</strong>
+                <p>We audit your current site, lead flow, and follow-up systems.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ba-num">2</span>
+              <div>
+                <strong>Pipeline Walkthrough</strong>
+                <p>You'll see exactly where leads are leaking and what to fix first.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ba-num">3</span>
+              <div>
+                <strong>Action Plan</strong>
+                <p>Leave the call with a clear next step—whether we work together or not.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="book-aside__card book-aside__card--quote">
+          <div class="why__quote-mark">"</div>
+          <p>Ironclad Digital completely changed the way we handle leads. We respond faster, book more jobs, and nothing falls through the cracks.</p>
+          <div class="book-aside__author">
+            <div class="testimonial__avatar">JM</div>
+            <div>
+              <div class="testimonial__name">Jason M.</div>
+              <div class="testimonial__role">Electrical Contractor · San Diego</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-aside__stats">
+          <div>
+            <div class="metric__val text-blue">1hr</div>
+            <div class="metric__label">Response Time</div>
+          </div>
+          <div>
+            <div class="metric__val text-green">100%</div>
+            <div class="metric__label">No Pressure</div>
+          </div>
+          <div>
+            <div class="metric__val text-blue">Free</div>
+            <div class="metric__label">Strategy Call</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__logo" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 2L4 7v9c0 7.2 5.1 13.4 12 14 6.9-.6 12-6.8 12-14V7L16 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 14h12M10 18h12M16 10v12" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>
+          </span>
+          <span class="nav__name">IRONCLAD <span class="nav__name--accent">DIGITAL</span></span>
+        </a>
+        <p class="footer__desc">Contractor growth infrastructure built to generate, track, and convert more high-value jobs.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.2.3-2 2-2H17V2.2C16.7 2.1 15.6 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zM4 10h4v10H4zM10 10h4v1.5c.7-1 2-1.7 3.5-1.7 2.7 0 4.5 1.7 4.5 5V20h-4v-4.6c0-1.4-.6-2.4-2-2.4s-2 1-2 2.4V20h-4V10z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__title">Navigation</div>
+        <ul class="footer__list">
+          <li><a href="index.html#system">Our System</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why">About</a></li>
+          <li><a href="index.html#results">Results</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__title">Services</div>
+        <ul class="footer__list">
+          <li><a href="#">Conversion Optimization</a></li>
+          <li><a href="#">Lead Infrastructure</a></li>
+          <li><a href="#">Google Ads</a></li>
+          <li><a href="#">Local SEO</a></li>
+          <li><a href="#">CRM Automation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__title">Service Areas</div>
+        <ul class="footer__list">
+          <li>San Diego, CA</li>
+          <li>Chula Vista, CA</li>
+          <li>Carlsbad, CA</li>
+          <li>Poway, CA</li>
+          <li>Surrounding Areas</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__title">Contact</div>
+        <ul class="footer__list">
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><a href="mailto:hello@ironcladdigital.com">hello@ironcladdigital.com</a></li>
+          <li><a href="book.html">Schedule a Call</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Ironclad Digital. All rights reserved.</span>
+      <span>San Diego, CA</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="script.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
