@@ -1,4 +1,5 @@
-require('dotenv').config();
+// Load .env in local development — cPanel/Passenger injects env vars directly.
+try { require('dotenv').config(); } catch (_) {}
 
 const express = require('express');
 const cors = require('cors');
