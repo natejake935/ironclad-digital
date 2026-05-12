@@ -244,7 +244,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   border-radius:var(--radius-lg);
   background:
     linear-gradient(135deg, rgba(7,9,13,.4), rgba(7,9,13,.85)),
-    repeating-linear-gradient(45deg, #1a2332 0 8px, #15202e 8px 16px);
+    url('images/hero_image.png') center/cover no-repeat;
   border:1px solid var(--border);
   overflow:hidden;
 }
@@ -450,15 +450,14 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   position:relative;
 }
 .pv-mock--bad{
-  background:
-    linear-gradient(180deg, #3b3225 0%, #221b14 100%);
+  background: url('images/before_website.png') center/cover no-repeat;
 }
 .pv-mock--bad::before{
   content:"";position:absolute;inset:6px;
   background:repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 2px, transparent 2px 6px);
 }
 .pv-mock--good{
-  background:linear-gradient(180deg, #0f1a2c, #0c1320);
+  background: url('images/after_website.png') center/cover no-repeat;
   border-color:rgba(31,123,255,.3);
 }
 .pv-mock--good::before{
@@ -717,8 +716,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   border-radius:var(--radius-lg);
   overflow:hidden;
   border:1px solid var(--border);
-  background:
-    linear-gradient(135deg, #0a1422 0%, #0e1825 50%, #0a1422 100%);
+  background: url('images/why_ironclad.png') center/cover no-repeat;
 }
 .why__image::before{
   content:"";position:absolute;inset:0;
@@ -836,22 +834,10 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.5));
 }
 .result-card__media--electrical{
-  background:
-    radial-gradient(circle at 20% 60%, rgba(255,180,80,.18), transparent 40%),
-    linear-gradient(135deg, #1a2230 0%, #0c1320 100%);
-}
-.result-card__media--electrical::before{
-  content:"";position:absolute;inset:0;
-  background:repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0 6px, transparent 6px 12px);
+  background: url('images/electrical_result.png') center/cover no-repeat;
 }
 .result-card__media--remodel{
-  background:
-    radial-gradient(circle at 80% 30%, rgba(31,123,255,.15), transparent 50%),
-    linear-gradient(135deg, #0f1a2a 0%, #0a1019 100%);
-}
-.result-card__media--remodel::before{
-  content:"";position:absolute;inset:0;
-  background:repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 6px, transparent 6px 12px);
+  background: url('images/remodel_result.png') center/cover no-repeat;
 }
 .result-card__body{padding:28px 28px 24px}
 .result-card__head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;gap:12px}
@@ -922,7 +908,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .testimonial__avatar{
   width:42px;height:42px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,var(--blue-soft),var(--blue));
+  background: url('images/jason_avatar.png') center/cover no-repeat;
+  color: transparent;
   font-size:13px;font-weight:700;
 }
 .testimonial__name{font-size:14px;font-weight:700}
