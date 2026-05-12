@@ -2,6 +2,10 @@ const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Build the from address — RESEND_FROM holds just the email (no angle brackets)
+// so cPanel doesn't strip it. Display name is added here in code.
+const FROM_ADDRESS = `Ironclad Digital <${process.env.RESEND_FROM}>`;
+
 // Escape all user-supplied strings before interpolating into HTML.
 function e(str) {
   return String(str ?? '')
@@ -21,7 +25,7 @@ async function sendInternalNotification(booking) {
   const fullName = `${contact.firstName} ${contact.lastName}`;
 
   const { data, error } = await resend.emails.send({
-    from: process.env.RESEND_FROM,
+    from: FROM_ADDRESS,
     to: [process.env.RESEND_NOTIFY_TO],
     // Subject uses plain text — no HTML escaping needed, but escape special chars.
     subject: `New Strategy Call Request — ${business.name.slice(0, 100)}`,
@@ -41,7 +45,7 @@ async function sendLeadConfirmation(booking) {
   const fullName = `${contact.firstName} ${contact.lastName}`;
 
   const { data, error } = await resend.emails.send({
-    from: process.env.RESEND_FROM,
+    from: FROM_ADDRESS,
     // Use only the validated email — not a user-controlled display name.
     to: [contact.email],
     subject: `You're all set — Ironclad Digital Strategy Call`,
