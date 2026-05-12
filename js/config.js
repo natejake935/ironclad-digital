@@ -13,7 +13,7 @@ window.IRONCLAD_CONFIG = Object.freeze({
   // ---------- API ----------
   // Base URL of the backend API.
   // Local dev: 'http://localhost:3001'
-  // Production: 'https://api.ironcladdigital.com'
+  // Production: 'https://api.ironcladdigital.agency'
   // Leave empty to run in mock mode (no server needed — useful for design preview).
   apiBaseUrl: '',
 
