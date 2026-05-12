@@ -15,7 +15,7 @@ window.IRONCLAD_CONFIG = Object.freeze({
   // Local dev: 'http://localhost:3001'
   // Production: 'https://api.ironcladdigital.agency'
   // Leave empty to run in mock mode (no server needed — useful for design preview).
-  apiBaseUrl: '',
+  apiBaseUrl: 'https://api.ironcladdigital.agency',
 
   // Endpoints relative to apiBaseUrl.
   endpoints: {
@@ -25,7 +25,7 @@ window.IRONCLAD_CONFIG = Object.freeze({
 
   // Public API key sent with requests (safe to expose in browser).
   // Server validates origin + rate-limits in addition to this.
-  publicApiKey: '',
+  publicApiKey: '65c859b7b8f2aa055ade8c9d500b72db1a304c300259f36cc3073decb3e3e487',
 
   // ---------- Behavior ----------
   // When true, the API client logs request/response to console.
