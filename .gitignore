@@ -32,3 +32,8 @@ desktop.ini
 dist/
 build/
 .cache/
+
+# --- Phusion Passenger (cPanel Node.js runtime) ---
+server/stderr.log
+server/stdout.log
+server/tmp/
