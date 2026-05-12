@@ -7,3 +7,4 @@ deployment:
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp -r js $DEPLOYPATH
+    - /bin/cp -r images $DEPLOYPATH
