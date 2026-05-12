@@ -6,7 +6,10 @@
 .env.*.local
 
 # --- Node.js ---
+# Without trailing slash to also match symlinks (cPanel creates node_modules as a symlink)
+node_modules
 node_modules/
+server/node_modules
 server/node_modules/
 npm-debug.log*
 yarn-debug.log*
