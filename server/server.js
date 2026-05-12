@@ -1,5 +1,5 @@
 // Load .env using explicit path so it works regardless of Passenger's CWD.
-try { require('dotenv').config({ path: require('path').join(__dirname, '.env') }); } catch (_) {}
+try { require('dotenv').config({ path: require('path').join(__dirname, '.env'), override: true }); } catch (_) {}
 
 const express = require('express');
 const cors = require('cors');
