@@ -453,7 +453,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .problem-card__visual{
   margin-bottom:18px;
   flex:1;
-  min-height:130px;
+  min-height:160px;
   display:flex;align-items:center;justify-content:center;
 }
 .problem-card__alert-text{
