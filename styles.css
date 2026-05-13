@@ -590,6 +590,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 }
 .step-card__head{
   display:flex;align-items:flex-start;gap:14px;margin-bottom:18px;
+  min-height:82px;
 }
 .step-card__num{
   display:inline-flex;align-items:center;justify-content:center;
