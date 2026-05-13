@@ -244,21 +244,8 @@
             <h3>Your Ad Money Is Going To Waste</h3>
           </div>
           <p>The ad isn't the problem. It's what happens after the click. Bad targeting or a weak website turns your ad budget into wasted money with nothing to show for it.</p>
-          <div class="problem-card__visual" style="flex-direction:column;gap:10px;align-items:stretch;">
-            <div class="pv-metrics" style="align-items:center;">
-              <div class="pv-metric">
-                <div class="pv-metric__label">Monthly Ad Spend</div>
-                <div class="pv-metric__val text-red">$800</div>
-              </div>
-              <svg viewBox="0 0 32 16" fill="none" style="width:32px;height:16px;flex-shrink:0;color:#ff4d4d;opacity:.7;">
-                <path d="M2 8h24M20 3l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <div class="pv-metric">
-                <div class="pv-metric__label">Calls From Ads</div>
-                <div class="pv-metric__val text-red">3</div>
-              </div>
-            </div>
-            <div class="pv-metrics" style="border-top:1px solid rgba(255,255,255,.08);padding-top:10px;">
+          <div class="problem-card__visual" style="flex-direction:column;gap:0;align-items:stretch;">
+            <div class="pv-metrics">
               <div class="pv-metric">
                 <div class="pv-metric__label">Bounce Rate</div>
                 <div class="pv-metric__val text-red">72%</div>
@@ -266,6 +253,29 @@
               <div class="pv-metric">
                 <div class="pv-metric__label">Conversion Rate</div>
                 <div class="pv-metric__val" style="color:#a7b4c8;">0.8%</div>
+              </div>
+            </div>
+            <div style="position:relative;display:flex;align-items:center;justify-content:center;height:32px;">
+              <div style="position:absolute;left:0;right:0;height:1px;background:rgba(255,255,255,.08);"></div>
+              <svg viewBox="0 0 44 32" style="position:relative;width:44px;height:32px;z-index:1;">
+                <defs>
+                  <linearGradient id="arrowTail" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#ff4d4d" stop-opacity="0"/>
+                    <stop offset="100%" stop-color="#ff4d4d" stop-opacity="0.8"/>
+                  </linearGradient>
+                </defs>
+                <rect x="17" y="0" width="10" height="18" fill="url(#arrowTail)"/>
+                <polygon points="2,16 22,32 42,16" fill="#ff4d4d" opacity="0.85"/>
+              </svg>
+            </div>
+            <div class="pv-metrics" style="padding-top:10px;">
+              <div class="pv-metric">
+                <div class="pv-metric__label">Monthly Ad Spend</div>
+                <div class="pv-metric__val text-red">$800</div>
+              </div>
+              <div class="pv-metric">
+                <div class="pv-metric__label">Calls From Ads</div>
+                <div class="pv-metric__val text-red">3</div>
               </div>
             </div>
           </div>
