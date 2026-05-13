@@ -1090,8 +1090,11 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   .trust__grid{grid-template-columns:repeat(2,1fr);gap:28px}
   .problems{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr);gap:18px}
-  .step-card__mock--form{background-size:cover}
   .step-card__head{min-height:0}
+  .step-card__mock{height:165px}
+  .step-card__mock--brand{background:url('images/authority_positioning.png') center/cover no-repeat!important;display:block!important}
+  .step-card__mock--form{background:url('images/conversion_optimization.png') center 75%/cover no-repeat!important;display:block!important;border:none!important;padding:0!important}
+  .mock-map{background:url('images/advertising_map.png') center/cover no-repeat!important;width:100%;height:100%}
   .results{grid-template-columns:1fr}
   .why{grid-template-columns:1fr;gap:48px}
   .why__visual{max-width:480px;margin:0 auto;width:100%}
@@ -1133,6 +1136,11 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   .trust__grid{grid-template-columns:1fr;gap:22px}
   .problems{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:14px}
+  .step-card__mock{height:165px}
+  .step-card__mock--brand{background:url('images/authority_positioning.png') center/cover no-repeat!important;display:block!important}
+  .step-card__mock--form{background:url('images/conversion_optimization.png') center 75%/cover no-repeat!important;display:block!important;border:none!important;padding:0!important}
+  .mock-map{background:url('images/advertising_map.png') center/cover no-repeat!important;width:100%;height:100%}
+  .mock-dash__stats{grid-template-columns:repeat(2,1fr)}
 
   .testimonial{
     grid-template-columns:1fr;
