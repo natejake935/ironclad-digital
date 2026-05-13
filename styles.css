@@ -613,6 +613,16 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   display:none;
 }
 
+.step-card__mock--form{
+  background: url('images/conversion_optimization.png') center/cover no-repeat;
+  display:block;
+  border:none;
+  padding:0;
+}
+.step-card__mock--form .mock-form{
+  display:none;
+}
+
 .mock-form{width:100%;text-align:left}
 .mock-form__title{font-size:11px;color:var(--text-dim);margin-bottom:8px;letter-spacing:.06em}
 .mock-input{
