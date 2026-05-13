@@ -605,21 +605,12 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 }
 
 /* Step mock variants */
-.step-card__mock--brand{display:flex;gap:6px;padding:14px}
+.step-card__mock--brand{
+  background: url('images/authority_positioning.png') center/cover no-repeat;
+  display:block;
+}
 .step-card__mock--brand .mock-screen{
-  flex:1;height:100%;border-radius:6px;
-  background:linear-gradient(180deg, #2d8cff 0%, #1f7bff 100%);
-  opacity:.18;
-  position:relative;
-}
-.step-card__mock--brand .mock-screen::before{
-  content:"";position:absolute;inset:8px;
-  background:linear-gradient(180deg, rgba(255,255,255,.2), rgba(255,255,255,.05));
-  border-radius:3px;
-}
-.step-card__mock--brand .mock-screen--alt{
-  background:#1a2332;opacity:1;
-  border:1px solid var(--border);
+  display:none;
 }
 
 .mock-form{width:100%;text-align:left}
@@ -638,12 +629,9 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 .mock-map{
   width:100%;height:100%;border-radius:8px;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(31,123,255,.25), transparent 50%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 16px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 1px, transparent 1px 16px),
-    #0a1019;
+  background: url('images/advertising_map.png') center/cover no-repeat;
   position:relative;
+  overflow:hidden;
 }
 .mock-map__pin{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
