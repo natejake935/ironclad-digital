@@ -479,7 +479,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   position:relative;
 }
 .pv-mock--bad{
-  background: url('images/before_website.png') center/cover no-repeat;
+  background: url('images/before_website.png') center 30%/cover no-repeat;
 }
 .pv-mock--bad::before{
   content:"";position:absolute;inset:6px;
