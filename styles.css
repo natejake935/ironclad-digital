@@ -453,7 +453,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .problem-card__visual{
   margin-bottom:18px;
   flex:1;
-  min-height:90px;
+  min-height:130px;
   display:flex;align-items:center;justify-content:center;
 }
 .problem-card__alert-text{
@@ -502,7 +502,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 
 .pv-chart{width:100%}
 .pv-chart__label{font-size:10px;color:var(--text-dim);margin-bottom:6px;letter-spacing:.06em}
-.pv-chart svg{width:100%;height:42px}
+.pv-chart svg{width:100%;height:60px}
 
 .pv-call{
   display:flex;align-items:center;gap:10px;width:100%;
