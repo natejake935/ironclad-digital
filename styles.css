@@ -649,7 +649,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 }
 
 .step-card__mock--form{
-  background: url('images/conversion_optimization.png') center 30%/cover no-repeat;
+  background: url('images/conversion_optimization.png') center bottom / 170% auto no-repeat;
   display:block;
   border:none;
   padding:0;
