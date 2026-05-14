@@ -40,7 +40,7 @@ window.IRONCLAD_CONFIG = Object.freeze({
   // to these services directly.
   serverIntegrations: {
     sms: 'twilio',          // automated text notification (server/services/sms.js)
-    email: 'resend',        // automated email notification (server/services/email.js)
+    email: 'twilio',        // automated email notification (server/services/email.js)
     crm: 'hubspot',         // CRM record + pipeline stage update (server/services/crm.js)
   },
 });
