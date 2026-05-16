@@ -77,10 +77,6 @@
       errors.push({ name: 'phone', message: 'Enter a valid phone number.' });
     }
 
-    if (!formEl.elements['consent'].checked) {
-      errors.push({ name: 'consent', message: 'Please confirm consent to continue.' });
-    }
-
     return errors;
   }
 
@@ -107,7 +103,8 @@
         preferredContactMethod: contactMethod,
       },
       consent: {
-        granted: !!data.get('consent'),
+        smsTransactional: !!data.get('sms_transactional'),
+        smsMarketing: !!data.get('sms_marketing'),
         timestamp: new Date().toISOString(),
       },
       meta: {
