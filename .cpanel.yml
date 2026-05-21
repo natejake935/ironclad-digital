@@ -3,10 +3,15 @@ deployment:
   tasks:
     - export DEPLOYPATH=$HOME/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp free-audit.html $DEPLOYPATH
     - /bin/cp book.html $DEPLOYPATH
     - /bin/cp privacy-policy.html $DEPLOYPATH
     - /bin/cp terms-and-conditions.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp audit.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp audit.js $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
     - /bin/cp -r js $DEPLOYPATH
     - /bin/cp -r images $DEPLOYPATH

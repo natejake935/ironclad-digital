@@ -3,763 +3,793 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ironclad Digital helps contractors get more calls, book more jobs, and never miss a lead. Built for service businesses in San Diego, CA." />
-  <title>Ironclad Digital — Predictable Job Pipelines For Contractors</title>
+  <title>Ironclad Digital — AI Automation Systems For Contractors</title>
+  <meta name="description" content="Stop losing jobs to faster contractors. We build AI-powered response and booking systems that help contractors reply fast, follow up automatically, and win more work." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2L4 8v8c0 7.18 5.16 13.9 12 15.46C22.84 29.9 28 23.18 28 16V8L16 2z' fill='%2311C5D9'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- =================== NAV =================== -->
+  <!-- ── NAV ─────────────────────────────────────────────────── -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
-      <a href="#" class="nav__brand" aria-label="Ironclad Digital home">
-        <span class="nav__logo" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2L4 7v9c0 7.2 5.1 13.4 12 14 6.9-.6 12-6.8 12-14V7L16 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M10 14h12M10 18h12M16 10v12" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
-          </svg>
-        </span>
-        <span class="nav__name">IRONCLAD <span class="nav__name--accent">DIGITAL</span></span>
+      <a href="#" class="nav__logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2L4 8v8c0 7.18 5.16 13.9 12 15.46C22.84 29.9 28 23.18 28 16V8L16 2z" fill="#11C5D9" fill-opacity="0.15" stroke="#11C5D9" stroke-width="1.5"/>
+          <path d="M11 16l3.5 3.5L21 12" stroke="#11C5D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>IRONCLAD<span class="nav__logo-sub">DIGITAL</span></span>
       </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#system">Our System</a>
-        <a href="#services">Services</a>
-        <a href="#why">About</a>
-        <a href="#results">Results</a>
-        <a href="#">Blog</a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#system">Systems</a>
+        <a href="#why-ironclad">Why Ironclad</a>
+        <a href="#contact">Contact</a>
       </nav>
-
-      <a href="book.html" class="btn btn--primary nav__cta">Book A Strategy Call
-        <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-
-      <button class="nav__toggle" aria-label="Toggle menu" id="navToggle">
+      <a href="#contact" class="btn btn--primary nav__cta">Book Free Audit</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <a href="#how-it-works" class="nav__drawer-link">How It Works</a>
+      <a href="#system" class="nav__drawer-link">Systems</a>
+      <a href="#why-ironclad" class="nav__drawer-link">Why Ironclad</a>
+      <a href="#contact" class="nav__drawer-link">Contact</a>
+      <a href="#contact" class="btn btn--primary nav__drawer-cta">Book Free Audit</a>
+    </div>
   </header>
 
-  <!-- =================== HERO =================== -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="container hero__inner">
-      <div class="hero__copy">
-        <div class="eyebrow">IRONCLAD DIGITAL<sup>™</sup></div>
-        <h1 class="hero__title">
-          Get More Calls.<br />
-          <span class="text-blue">Book More Jobs.</span><br />
-          Grow Your Business.
-        </h1>
-        <p class="hero__sub">
-          We help contractors get more leads, follow up fast, and never let a job slip through the cracks.
-        </p>
+  <main>
 
-        <div class="hero__ctas">
-          <a href="book.html" class="btn btn--primary">Book A Strategy Call
-            <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#system" class="btn btn--ghost">Explore Our System
-            <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-image" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">AI Lead Systems For Contractors</p>
+          <h1 class="hero__headline">Stop Losing Jobs<br>To Faster Contractors</h1>
+          <p class="hero__sub">
+            78% of customers choose the first company that responds.
+            If your leads sit too long, they book with someone else.
+            We'll show you where leads are slipping away and what to fix first.
+          </p>
+
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary btn--lg">
+              Book Free Lead Leak Audit
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#how-it-works" class="btn btn--ghost btn--lg">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><polygon points="5,3 13,8 5,13" fill="currentColor"/></svg>
+              See How It Works
+            </a>
+          </div>
+
+          <p class="hero__support">Includes a lead leak check + website/booking flow mockup.</p>
+
+          <div class="hero__outcomes">
+            <span>More calls</span>
+            <span class="hero__outcome-dot" aria-hidden="true">·</span>
+            <span>Faster replies</span>
+            <span class="hero__outcome-dot" aria-hidden="true">·</span>
+            <span>More booked jobs</span>
+          </div>
+
+          <div class="hero__pills">
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.25" stroke="#11C5D9" stroke-width="1.25"/><path d="M4.5 7l2 2 3-3" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>Fast Replies</span>
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.25" stroke="#11C5D9" stroke-width="1.25"/><path d="M4.5 7l2 2 3-3" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>Missed Call Text Back</span>
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.25" stroke="#11C5D9" stroke-width="1.25"/><path d="M4.5 7l2 2 3-3" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>Auto Follow-Up</span>
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.25" stroke="#11C5D9" stroke-width="1.25"/><path d="M4.5 7l2 2 3-3" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>More Booked Jobs</span>
+          </div>
         </div>
 
-        <div class="hero__micro">
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          No pressure. Just real solutions.
-        </div>
-      </div>
-
-      <!-- Hero visual mock -->
-      <div class="hero__visual" aria-hidden="true">
-        <div class="hero__photo">
-          <div class="hero__photo-overlay"></div>
-        </div>
-
-        <div class="dashboard">
-          <div class="dashboard__head">
+        <div class="hero__visual" aria-hidden="true">
+          <div class="flow-card flow-card--entry">
+            <div class="flow-card__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3.5" stroke="#11C5D9" stroke-width="1.5"/><path d="M3 17c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
             <div>
-              <div class="dashboard__title">Pipeline Overview</div>
-              <div class="dashboard__sub">Live · Last 30 days</div>
+              <p class="flow-card__label">New Lead Comes In</p>
+              <p class="flow-card__sub">Instant notification</p>
             </div>
-            <div class="dashboard__dot"></div>
           </div>
 
-          <div class="dashboard__stats">
-            <div><div class="stat__label">New Leads</div><div class="stat__num">23</div><div class="stat__bar"><span style="width:90%"></span></div></div>
-            <div><div class="stat__label">Contacted</div><div class="stat__num">18</div><div class="stat__bar"><span style="width:72%"></span></div></div>
-            <div><div class="stat__label">Qualified</div><div class="stat__num">12</div><div class="stat__bar"><span style="width:50%"></span></div></div>
-            <div><div class="stat__label">Booked</div><div class="stat__num">7</div><div class="stat__bar"><span style="width:30%"></span></div></div>
+          <div class="flow-connector" aria-hidden="true">
+            <div class="flow-connector__line"></div>
+            <div class="flow-sub-cards">
+              <div class="flow-sub-card">Contractor 1</div>
+              <div class="flow-sub-card">Contractor 2</div>
+              <div class="flow-sub-card">Contractor 3</div>
+              <div class="flow-sub-card">Contractor 4</div>
+            </div>
+            <div class="flow-connector__line"></div>
           </div>
 
-          <div class="dashboard__row">
-            <div class="dashboard__chart">
-              <div class="chart__head">
-                <div>
-                  <div class="chart__label">Leads This Month</div>
-                  <div class="chart__num">156 <span class="chart__delta">+31%</span></div>
-                </div>
+          <div class="flow-card flow-card--hero">
+            <div class="flow-card__hero-badge">FIRST RESPONSE</div>
+            <div class="flow-card__hero-body">
+              <div class="flow-card__icon flow-card__icon--hero">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 3h14v14H5z" stroke="#070B0F" stroke-width="1.75" stroke-linejoin="round"/><path d="M5 8h14M9 17v2M15 17v2" stroke="#070B0F" stroke-width="1.75" stroke-linecap="round"/></svg>
               </div>
-              <svg viewBox="0 0 200 60" class="chart__svg" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#1f7bff" stop-opacity=".5"/>
-                    <stop offset="100%" stop-color="#1f7bff" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path d="M0,45 L20,40 L40,42 L60,30 L80,34 L100,22 L120,26 L140,18 L160,22 L180,12 L200,15 L200,60 L0,60 Z" fill="url(#g1)"/>
-                <path d="M0,45 L20,40 L40,42 L60,30 L80,34 L100,22 L120,26 L140,18 L160,22 L180,12 L200,15" fill="none" stroke="#2d8cff" stroke-width="1.6"/>
-              </svg>
-            </div>
-
-            <div class="dashboard__donut">
-              <div class="donut__label">Lead Source</div>
-              <div class="donut">
-                <svg viewBox="0 0 36 36">
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1c2433" stroke-width="3.5"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1f7bff" stroke-width="3.5" stroke-dasharray="41 100" transform="rotate(-90 18 18)"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#2d8cff" stroke-width="3.5" stroke-dasharray="29 100" stroke-dashoffset="-41" transform="rotate(-90 18 18)"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#3a9eff" stroke-width="3.5" stroke-dasharray="21 100" stroke-dashoffset="-70" transform="rotate(-90 18 18)"/>
-                </svg>
-              </div>
-              <ul class="donut__legend">
-                <li><span class="dot" style="background:#1f7bff"></span>Google Ads <em>41%</em></li>
-                <li><span class="dot" style="background:#2d8cff"></span>Google Maps <em>29%</em></li>
-                <li><span class="dot" style="background:#3a9eff"></span>Referral <em>21%</em></li>
-                <li><span class="dot" style="background:#1c2433"></span>Other <em>9%</em></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="float-card float-card--1">
-          <span class="float-card__icon" style="background:rgba(31,123,255,.15);color:#2d8cff">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M3 4h10v8H3z" stroke="currentColor" stroke-width="1.3"/><path d="M3 4l5 4 5-4" stroke="currentColor" stroke-width="1.3"/></svg>
-          </span>
-          <div>
-            <div class="float-card__title">New Lead Captured</div>
-            <div class="float-card__sub">Electrical Panel Upgrade</div>
-          </div>
-          <span class="float-card__time">2m ago</span>
-        </div>
-
-        <div class="float-card float-card--2">
-          <span class="float-card__icon" style="background:rgba(38,194,129,.15);color:#26c281">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M2 5a2 2 0 012-2h8a2 2 0 012 2v5a2 2 0 01-2 2H6l-3 2v-2H4a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.3"/></svg>
-          </span>
-          <div>
-            <div class="float-card__title">Missed Call Auto Response</div>
-            <div class="float-card__sub">Text sent to lead</div>
-          </div>
-          <span class="float-card__time">5m ago</span>
-        </div>
-
-        <div class="float-card float-card--3">
-          <span class="float-card__icon" style="background:rgba(31,123,255,.15);color:#2d8cff">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M2 12l4-4 3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <div>
-            <div class="float-card__title">+31% Lead Conversion</div>
-            <div class="float-card__sub">This month</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== TRUST BANNER =================== -->
-  <section class="trust">
-    <div class="container trust__grid">
-      <div class="trust__item">
-        <div class="trust__icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-        <div>
-          <div class="trust__title">6+ Years<br />In The Trades</div>
-          <div class="trust__sub">We've worked in the field. We know how your business runs.</div>
-        </div>
-      </div>
-      <div class="trust__item">
-        <div class="trust__icon">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 10h18M8 5v14" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-        <div>
-          <div class="trust__title">Call Tracking<br />That Works</div>
-          <div class="trust__sub">We set up tools that catch every call and follow up for you.</div>
-        </div>
-      </div>
-      <div class="trust__item">
-        <div class="trust__icon">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-        <div>
-          <div class="trust__title">Built For<br />Contractors</div>
-          <div class="trust__sub">Made for electricians, plumbers, roofers, and other trade businesses.</div>
-        </div>
-      </div>
-      <div class="trust__item">
-        <div class="trust__icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
-        </div>
-        <div>
-          <div class="trust__title">Local Area<br />Focused</div>
-          <div class="trust__sub">We help you get more jobs in your area — not just traffic.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== COMMON PROBLEMS =================== -->
-  <section class="section" id="services">
-    <div class="container">
-      <header class="section-header">
-        <div class="eyebrow">COMMON PROBLEMS</div>
-        <h2 class="section-title">Most Contractors Are Losing Jobs And Don't Know It</h2>
-        <p class="section-sub">It usually comes down to three things — how you look online, how easy you are to reach, and how fast you follow up.</p>
-      </header>
-
-      <div class="problems">
-        <article class="problem-card">
-          <div class="problem-card__head">
-            <span class="problem-card__alert" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M8 4v5M8 11v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <h3>Your Image Doesn't Match Your Work</h3>
-          </div>
-          <p>If your website looks cheap or outdated, customers assume your work is too — and call someone else before they ever reach out.</p>
-          <div class="problem-card__visual">
-            <div class="pv-mock pv-mock--bad" style="width:100%;height:160px;border-radius:8px;"></div>
-          </div>
-          <div class="problem-card__alert-text">Bad first impressions lose jobs.</div>
-        </article>
-
-        <article class="problem-card">
-          <div class="problem-card__head">
-            <span class="problem-card__alert" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M8 4v5M8 11v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <h3>Your Ad Money Is Going To Waste</h3>
-          </div>
-          <p>The ad isn't the problem. It's what happens after the click. Bad targeting or a weak website turns your ad budget into wasted money with nothing to show for it.</p>
-          <div class="problem-card__visual" style="flex-direction:column;gap:0;align-items:stretch;">
-            <div class="pv-metrics">
-              <div class="pv-metric">
-                <div class="pv-metric__label">Bounce Rate</div>
-                <div class="pv-metric__val text-red">72%</div>
-              </div>
-              <div class="pv-metric">
-                <div class="pv-metric__label">Conversion Rate</div>
-                <div class="pv-metric__val text-red">0.8%</div>
-              </div>
-            </div>
-            <div style="position:relative;display:flex;align-items:center;justify-content:center;height:48px;">
-              <div style="position:absolute;left:0;right:0;height:1px;background:rgba(255,255,255,.08);"></div>
-              <svg viewBox="0 0 44 48" style="position:relative;width:44px;height:48px;z-index:1;">
-                <defs>
-                  <linearGradient id="arrowTail" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#ff4d4d" stop-opacity="0"/>
-                    <stop offset="55%" stop-color="#ff4d4d" stop-opacity="0.75"/>
-                    <stop offset="100%" stop-color="#ff4d4d" stop-opacity="0.85"/>
-                  </linearGradient>
-                </defs>
-                <path d="M13,0 L31,0 L31,30 L42,30 L22,48 L2,30 L13,30 Z" fill="url(#arrowTail)"/>
-              </svg>
-            </div>
-            <div class="pv-metrics" style="padding-top:10px;">
-              <div class="pv-metric">
-                <div class="pv-metric__label">Monthly Ad Spend</div>
-                <div class="pv-metric__val text-red">$800</div>
-              </div>
-              <div class="pv-metric">
-                <div class="pv-metric__label">Calls From Ads</div>
-                <div class="pv-metric__val text-red">3</div>
-              </div>
-            </div>
-          </div>
-          <div class="problem-card__alert-text">Clicks don't pay bills. Calls do.</div>
-        </article>
-
-        <article class="problem-card">
-          <div class="problem-card__head">
-            <span class="problem-card__alert" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M8 4v5M8 11v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <h3>You Can't Count On Referrals Alone</h3>
-          </div>
-          <p>Word of mouth is great. But it's not steady. Some months are packed. Some are slow. You need leads coming in on your own.</p>
-          <div class="problem-card__visual">
-            <div class="pv-chart">
-              <div class="pv-chart__label">Leads Over Time</div>
-              <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="chartRed" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#ff4d4d" stop-opacity=".3"/>
-                    <stop offset="100%" stop-color="#ff4d4d" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path d="M0,48 L20,44 L35,40 L50,4 L65,42 L80,46 L100,44 L120,40 L135,6 L150,42 L165,46 L180,44 L200,48 L200,60 L0,60 Z" fill="url(#chartRed)"/>
-                <path d="M0,48 L20,44 L35,40 L50,4 L65,42 L80,46 L100,44 L120,40 L135,6 L150,42 L165,46 L180,44 L200,48" fill="none" stroke="#ff4d4d" stroke-width="1.8"/>
-              </svg>
-            </div>
-          </div>
-          <div class="problem-card__alert-text">Slow months hurt your business.</div>
-        </article>
-
-        <article class="problem-card problem-card--danger">
-          <div class="problem-card__head">
-            <span class="problem-card__alert problem-card__alert--red" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M8 4v5M8 11v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <h3>Every Missed Call Is Money Left Behind</h3>
-          </div>
-          <p>If you don't call back fast, they move on. Most customers go with whoever gets back to them first.</p>
-          <div class="problem-card__visual" style="flex-direction:column;gap:8px;align-items:stretch;">
-            <div class="pv-call">
-              <span class="pv-call__icon">
-                <svg viewBox="0 0 16 16" fill="none"><path d="M3 4c0 6 3 9 9 9l1-2-3-2-2 1c-1-1-2-2-3-3l1-2-2-3-2 1z" stroke="currentColor" stroke-width="1.4"/></svg>
-              </span>
               <div>
-                <div class="pv-call__title">Missed Call</div>
-                <div class="pv-call__sub">Today, 2:15 PM</div>
+                <p class="flow-card__label flow-card__label--hero">Ironclad Responds First</p>
+                <p class="flow-card__sub flow-card__sub--hero">Instant Text Sent</p>
               </div>
-              <span class="pv-call__dot"></span>
-            </div>
-            <div class="pv-call">
-              <span class="pv-call__icon">
-                <svg viewBox="0 0 16 16" fill="none"><path d="M3 4c0 6 3 9 9 9l1-2-3-2-2 1c-1-1-2-2-3-3l1-2-2-3-2 1z" stroke="currentColor" stroke-width="1.4"/></svg>
-              </span>
-              <div>
-                <div class="pv-call__title">Missed Call</div>
-                <div class="pv-call__sub">Today, 11:42 AM</div>
-              </div>
-              <span class="pv-call__dot"></span>
-            </div>
-            <div class="pv-call">
-              <span class="pv-call__icon">
-                <svg viewBox="0 0 16 16" fill="none"><path d="M3 4c0 6 3 9 9 9l1-2-3-2-2 1c-1-1-2-2-3-3l1-2-2-3-2 1z" stroke="currentColor" stroke-width="1.4"/></svg>
-              </span>
-              <div>
-                <div class="pv-call__title">Missed Call</div>
-                <div class="pv-call__sub">Yesterday, 4:58 PM</div>
-              </div>
-              <span class="pv-call__dot"></span>
+              <span class="flow-card__check">✓</span>
             </div>
           </div>
-          <div class="problem-card__alert-text">First to respond usually wins the job.</div>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <!-- =================== STATEMENT BREAK =================== -->
-  <section class="statement">
-    <div class="statement__grid" aria-hidden="true"></div>
-    <div class="container">
-      <h2 class="statement__title">Every Missed Lead Is <span class="text-blue">A Job Gone.</span></h2>
-      <p class="statement__sub">We make sure you never miss one.</p>
-    </div>
-  </section>
+          <div class="flow-connector flow-connector--active" aria-hidden="true">
+            <div class="flow-connector__line flow-connector__line--active"></div>
+          </div>
 
-  <!-- =================== 4-STEP SYSTEM =================== -->
-  <section class="section" id="system">
-    <div class="container">
-      <header class="section-header">
-        <div class="eyebrow">THE IRONCLAD SYSTEM<sup>™</sup></div>
-        <h2 class="section-title">The 4-Step Job Pipeline System</h2>
-        <p class="section-sub">Here's exactly how we help you get more leads and turn them into booked jobs.</p>
-      </header>
-
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-card__head">
-            <span class="step-card__num">01</span>
+          <div class="flow-card flow-card--booked">
+            <div class="flow-card__icon flow-card__icon--booked">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.5 10.5l4 4 7-8" stroke="#11C5D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <div>
-              <h3>Look The Part</h3>
-              <div class="step-card__tagline text-blue">Make a great first impression.</div>
+              <p class="flow-card__label">Job Booked</p>
+              <p class="flow-card__sub">Customer Confirms</p>
             </div>
-          </div>
-          <div class="step-card__mock step-card__mock--brand">
-            <div class="mock-screen"></div>
-            <div class="mock-screen mock-screen--alt"></div>
-          </div>
-          <ul class="step-card__list">
-            <li>Better logo and branding</li>
-            <li>Words that build trust</li>
-            <li>Clean, pro website</li>
-            <li>Photos that show your work</li>
-          </ul>
-          <div class="step-card__badge">Build Trust Faster</div>
-        </article>
-
-        <span class="step-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-
-        <article class="step-card">
-          <div class="step-card__head">
-            <span class="step-card__num">02</span>
-            <div>
-              <h3>Turn Visitors Into Calls</h3>
-              <div class="step-card__tagline text-blue">Make it easy for people to reach you.</div>
-            </div>
-          </div>
-          <div class="step-card__mock step-card__mock--form">
-            <div class="mock-form">
-              <div class="mock-form__title">Request a Quote</div>
-              <div class="mock-input">Full Name</div>
-              <div class="mock-input">Phone Number</div>
-              <div class="mock-input">Service Needed</div>
-              <div class="mock-btn">GET MY QUOTE</div>
-            </div>
-          </div>
-          <ul class="step-card__list">
-            <li>Fast on phones</li>
-            <li>Simple quote forms</li>
-            <li>Clear call buttons</li>
-            <li>Call tracking built in</li>
-          </ul>
-          <div class="step-card__badge">Get More Calls</div>
-        </article>
-
-        <span class="step-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-
-        <article class="step-card">
-          <div class="step-card__head">
-            <span class="step-card__num">03</span>
-            <div>
-              <h3>Get In Front Of Local Customers</h3>
-              <div class="step-card__tagline text-blue">Show up when people search for your trade.</div>
-            </div>
-          </div>
-          <div class="step-card__mock step-card__mock--map">
-            <div class="mock-map">
-              <span class="mock-map__ping mock-map__ping--1"></span>
-              <span class="mock-map__ping mock-map__ping--2"></span>
-              <span class="mock-map__pin"></span>
-            </div>
-          </div>
-          <ul class="step-card__list">
-            <li>Google Ads</li>
-            <li>Search visibility</li>
-            <li>Google Maps optimization</li>
-            <li>Social media management</li>
-          </ul>
-          <div class="step-card__badge">Get More Local Clients</div>
-        </article>
-
-        <span class="step-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-
-        <article class="step-card">
-          <div class="step-card__head">
-            <span class="step-card__num">04</span>
-            <div>
-              <h3>Never Lose A Lead Again</h3>
-              <div class="step-card__tagline text-blue">Follow up fast. Book more jobs.</div>
-            </div>
-          </div>
-          <div class="step-card__mock step-card__mock--pipeline">
-            <div class="mock-dash">
-              <div class="mock-dash__head">
-                <span class="mock-dash__title">LEAD PIPELINE</span>
-                <span class="mock-dash__live">● LIVE</span>
-              </div>
-              <div class="mock-dash__stats">
-                <div class="mock-dash__stat">
-                  <div class="mock-dash__num">23</div>
-                  <div class="mock-dash__bar"><span style="width:90%"></span></div>
-                  <div class="mock-dash__label">New</div>
-                </div>
-                <div class="mock-dash__stat">
-                  <div class="mock-dash__num">18</div>
-                  <div class="mock-dash__bar"><span style="width:70%"></span></div>
-                  <div class="mock-dash__label">Called</div>
-                </div>
-                <div class="mock-dash__stat">
-                  <div class="mock-dash__num">11</div>
-                  <div class="mock-dash__bar"><span style="width:46%"></span></div>
-                  <div class="mock-dash__label">Quoted</div>
-                </div>
-                <div class="mock-dash__stat">
-                  <div class="mock-dash__num">7</div>
-                  <div class="mock-dash__bar mock-dash__bar--green"><span style="width:28%"></span></div>
-                  <div class="mock-dash__label">Booked</div>
-                </div>
-              </div>
-              <div class="mock-dash__footer">
-                <span class="mock-dash__delta">↑ 31% more jobs this month</span>
-              </div>
-            </div>
-          </div>
-          <ul class="step-card__list">
-            <li>Custom CRM system</li>
-            <li>Missed-call text-back</li>
-            <li>Auto follow-up</li>
-            <li>See all your leads in one place</li>
-          </ul>
-          <div class="step-card__badge">Stop Losing Jobs</div>
-        </article>
-      </div>
-
-      <!-- Pipeline flow strip -->
-      <div class="flow">
-        <div class="flow__item"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.4"/></svg></span><span>Traffic</span></div>
-        <span class="flow__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="flow__item"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 8h18" stroke="currentColor" stroke-width="1.4"/></svg></span><span>Website</span></div>
-        <span class="flow__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="flow__item"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="1.4"/><path d="M8 11h8M8 14h5" stroke="currentColor" stroke-width="1.4"/></svg></span><span>Lead Capture</span></div>
-        <span class="flow__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="flow__item"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.4"/></svg></span><span>CRM</span></div>
-        <span class="flow__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="flow__item"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H9l-4 3v-3H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.4"/></svg></span><span>Follow-Up</span></div>
-        <span class="flow__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="flow__item flow__item--end"><span class="flow__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Booked Job</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== WHY IRONCLAD =================== -->
-  <section class="section section--why" id="why">
-    <div class="container why">
-      <div class="why__visual">
-        <div class="why__image">
-          <div class="why__image-overlay"></div>
-          <div class="why__image-tags">
-            <span>Field Experience</span>
-            <span>Built On Site</span>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="why__content">
-        <div class="eyebrow">WHY IRONCLAD</div>
-        <h2 class="section-title">Built By Someone Who Understands The Trades</h2>
-        <p class="why__body">
-          We didn't build this from an office. We spent years working in electrical and construction. We know what it's actually like out there.
-        </p>
-        <p class="why__body">
-          We know how busy it gets, how fast a missed call turns into a lost job, and why having steady work every month matters.
-        </p>
-        <p class="why__body why__body--highlight">
-          That's why the systems we build actually work for contractors.
-        </p>
-
-        <div class="why__creds">
-          <div class="cred">
-            <span class="cred__icon">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M6 7h12v13H6z" stroke="currentColor" stroke-width="1.4"/><path d="M9 7V5h6v2" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <div>
-              <div class="cred__title">6+ Years In<br />The Trades</div>
-              <div class="cred__sub">We worked in the field before we built anything.</div>
-            </div>
-          </div>
-          <div class="cred">
-            <span class="cred__icon">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <div>
-              <div class="cred__title">Call Tracking<br />Tools</div>
-              <div class="cred__sub">We set up tools that catch and follow up with every caller.</div>
-            </div>
-          </div>
-          <div class="cred">
-            <span class="cred__icon">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.4"/></svg>
-            </span>
-            <div>
-              <div class="cred__title">Built For Local<br />Service Businesses</div>
-              <div class="cred__sub">Built for businesses that need steady, local jobs — not just website traffic.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="why__quote">
-          <div class="why__quote-mark">"</div>
-          <div>
-            <div class="why__quote-title">WE DON'T JUST<br />BUILD WEBSITES.</div>
-            <div class="why__quote-sub text-blue">WE BUILD SYSTEMS THAT<br />GET YOU MORE JOBS.</div>
-          </div>
-        </div>
+    <!-- ============================================================
+         PAIN STRIP
+    ============================================================ -->
+    <div class="pain-strip">
+      <div class="container">
+        <p class="pain-strip__text">Stop Paying For Leads Your <span class="underline-teal">Competitors Book.</span></p>
       </div>
     </div>
-  </section>
 
-  <!-- =================== RESULTS =================== -->
-  <section class="section" id="results">
-    <div class="container">
-      <header class="section-header">
-        <div class="eyebrow">REAL RESULTS</div>
-        <h2 class="section-title">Results From Real Contractors</h2>
-        <p class="section-sub">Real businesses. Real numbers. Based in San Diego, CA.</p>
-      </header>
-
-      <div class="results">
-        <article class="result-card">
-          <div class="result-card__media result-card__media--electrical"></div>
-          <div class="result-card__body">
-            <div class="result-card__head">
-              <h3>Electrical Contractor</h3>
-              <span class="result-card__loc">San Diego, CA</span>
-            </div>
-            <ul class="result-card__list">
-              <li>New brand and look</li>
-              <li>New website built to get calls</li>
-              <li>Google Ads</li>
-              <li>Call tracking set up</li>
+    <!-- ============================================================
+         PROBLEM
+    ============================================================ -->
+    <section class="problem section" id="problem">
+      <div class="container">
+        <div class="problem__inner">
+          <div class="problem__text">
+            <p class="eyebrow">The Problem</p>
+            <h2>More Ads Won't Fix<br>Slow Follow-Up</h2>
+            <p class="section-body">
+              Most contractors don't need more leads.
+              They need faster replies.
+              Missed calls and slow texts cost jobs.
+            </p>
+            <ul class="problem__list">
+              <li><span class="x-icon" aria-hidden="true"></span>Missed calls.</li>
+              <li><span class="x-icon" aria-hidden="true"></span>Slow replies.</li>
+              <li><span class="x-icon" aria-hidden="true"></span>Lost jobs.</li>
             </ul>
-            <div class="result-card__metrics">
-              <div><div class="metric__val text-green">+62%</div><div class="metric__label">More Calls</div></div>
-              <div><div class="metric__val text-blue">+41%</div><div class="metric__label">More Booked Jobs</div></div>
-              <div><div class="metric__val text-red">-78%</div><div class="metric__label">Fewer Missed Calls</div></div>
-            </div>
           </div>
-        </article>
 
-        <article class="result-card">
-          <div class="result-card__media result-card__media--remodel"></div>
-          <div class="result-card__body">
-            <div class="result-card__head">
-              <h3>Home Remodeling Company</h3>
-              <span class="result-card__loc">San Diego, CA</span>
-            </div>
-            <ul class="result-card__list">
-              <li>Rebuilt website</li>
-              <li>Search visibility &amp; Google Ads</li>
-              <li>Call tracking set up</li>
-              <li>Missed-call text-back</li>
-            </ul>
-            <div class="result-card__metrics">
-              <div><div class="metric__val text-green">+55%</div><div class="metric__label">More Quote Requests</div></div>
-              <div><div class="metric__val text-blue">+38%</div><div class="metric__label">Booked Jobs</div></div>
-              <div><div class="metric__val text-blue">+29%</div><div class="metric__label">Average Job Value</div></div>
+          <div class="problem__visual">
+            <div class="phone-card">
+              <div class="phone-card__header">
+                <div class="phone-card__dot phone-card__dot--red"></div>
+                <div class="phone-card__dot phone-card__dot--yellow"></div>
+                <div class="phone-card__dot phone-card__dot--green"></div>
+                <span class="phone-card__title">Notifications</span>
+              </div>
+              <div class="phone-card__bar"></div>
+              <div class="phone-card__items">
+                <div class="phone-item phone-item--red">
+                  <span class="phone-item__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4a14 14 0 0 0 14 14l1.5-1.5-3-3-1.5 1c-1.4-.7-3.3-2.6-4-4l1-1.5L8.5 5 7 6.5z" fill="#FF5A5F"/></svg>
+                  </span>
+                  <div class="phone-item__text">
+                    <p class="phone-item__title">3 Missed Calls</p>
+                    <p class="phone-item__sub">from new leads</p>
+                  </div>
+                  <span class="phone-item__badge phone-item__badge--red">3</span>
+                </div>
+                <div class="phone-item phone-item--yellow">
+                  <span class="phone-item__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 4h16v12H3z" stroke="#F5A623" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 9h16M7 16v2M15 16v2" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </span>
+                  <div class="phone-item__text">
+                    <p class="phone-item__title">2 Unread Texts</p>
+                    <p class="phone-item__sub">from customers</p>
+                  </div>
+                  <span class="phone-item__badge phone-item__badge--yellow">2</span>
+                </div>
+                <div class="phone-item phone-item--orange">
+                  <span class="phone-item__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3v8M11 14v1.5" stroke="#FF7F50" stroke-width="2.5" stroke-linecap="round"/><circle cx="11" cy="11" r="9" stroke="#FF7F50" stroke-width="1.5"/></svg>
+                  </span>
+                  <div class="phone-item__text">
+                    <p class="phone-item__title">Lead Expired</p>
+                    <p class="phone-item__sub">Job went to someone else</p>
+                  </div>
+                  <span class="phone-item__badge phone-item__badge--orange">!</span>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
 
-      <div class="testimonial">
-        <div class="testimonial__mark">"</div>
-        <blockquote class="testimonial__quote">
-          Ironclad Digital completely changed the way we handle leads. We respond faster, book more jobs, and nothing falls through the cracks.
-        </blockquote>
-        <div class="testimonial__meta">
-          <div class="testimonial__avatar" aria-hidden="true">JM</div>
-          <div>
-            <div class="testimonial__name">Jason M.</div>
-            <div class="testimonial__role">Electrical Contractor · San Diego, CA</div>
+        <div class="pain-cards">
+          <div class="pain-card">
+            <div class="pain-card__accent pain-card__accent--red" aria-hidden="true"></div>
+            <div class="pain-card__icon">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 5a16 16 0 0 0 16 16l1.5-1.5-3-3-1.5 1c-1.5-.8-3.7-3-4.5-4.5l1-1.5-3-3L9 9.5z" fill="#FF5A5F" opacity="0.85"/></svg>
+            </div>
+            <h3>Missed Calls Cost Jobs</h3>
+            <p>If you don't answer, they call someone else.</p>
           </div>
-          <div class="testimonial__rating">
-            <span class="stars" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.3 4.6L15 6.3l-3.5 3.4L12.3 15 8 12.6 3.7 15l.8-5.3L1 6.3l4.7-.7L8 1z"/></svg>
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.3 4.6L15 6.3l-3.5 3.4L12.3 15 8 12.6 3.7 15l.8-5.3L1 6.3l4.7-.7L8 1z"/></svg>
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.3 4.6L15 6.3l-3.5 3.4L12.3 15 8 12.6 3.7 15l.8-5.3L1 6.3l4.7-.7L8 1z"/></svg>
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.3 4.6L15 6.3l-3.5 3.4L12.3 15 8 12.6 3.7 15l.8-5.3L1 6.3l4.7-.7L8 1z"/></svg>
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.3 4.6L15 6.3l-3.5 3.4L12.3 15 8 12.6 3.7 15l.8-5.3L1 6.3l4.7-.7L8 1z"/></svg>
-            </span>
-            <span class="testimonial__rating-text">5.0 on Google</span>
+          <div class="pain-card">
+            <div class="pain-card__accent pain-card__accent--orange" aria-hidden="true"></div>
+            <div class="pain-card__icon">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v10M13 16v1.5" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/><circle cx="13" cy="13" r="11" stroke="#F5A623" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Slow Replies Lose Work</h3>
+            <p>Hot leads cool off fast.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-card__accent pain-card__accent--red" aria-hidden="true"></div>
+            <div class="pain-card__icon">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 20h16M8 20v-8M13 20V8M18 20v-5" stroke="#FF5A5F" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <h3>More Ads Won't Fix It</h3>
+            <p>Bad follow-up just wastes more money.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =================== FINAL CTA =================== -->
-  <section class="cta" id="cta">
-    <div class="cta__grid" aria-hidden="true"></div>
-    <div class="container cta__inner">
-      <div class="cta__logo" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none">
-          <path d="M16 2L4 7v9c0 7.2 5.1 13.4 12 14 6.9-.6 12-6.8 12-14V7L16 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M10 14h12M10 18h12M16 10v12" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
-        </svg>
-      </div>
-      <h2 class="cta__title">Ready To Get More Jobs?</h2>
-      <p class="cta__sub">Book a free call. We'll show you what's holding your business back and exactly how to fix it.</p>
-      <a href="book.html" class="btn btn--primary btn--lg">Book A Strategy Call
-        <svg class="btn__icon" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <div class="hero__micro">
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        No pressure. Just real solutions.
-      </div>
-    </div>
-  </section>
+    <!-- ============================================================
+         WHAT YOUR FREE AUDIT INCLUDES
+    ============================================================ -->
+    <section class="audit-block section section--dark" id="audit">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">Free Audit</p>
+        <h2 class="heading--center">What Your Free Audit Includes</h2>
 
-  <!-- =================== FOOTER =================== -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="#" class="nav__brand">
-          <span class="nav__logo" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none"><path d="M16 2L4 7v9c0 7.2 5.1 13.4 12 14 6.9-.6 12-6.8 12-14V7L16 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 14h12M10 18h12M16 10v12" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>
-          </span>
-          <span class="nav__name">IRONCLAD <span class="nav__name--accent">DIGITAL</span></span>
+        <div class="audit-items">
+          <div class="audit-item">
+            <div class="audit-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="9.5" cy="9.5" r="6.5" stroke="#11C5D9" stroke-width="1.5"/><path d="M14.5 14.5L19 19" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/><path d="M9.5 7v5M7 9.5h5" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="audit-item__text">
+              <h3>Lead Leak Check</h3>
+              <p>See where calls, forms, and follow-up may be costing you jobs.</p>
+            </div>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#11C5D9" stroke-width="1.5"/><path d="M11 6v5.5l3.5 2" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="audit-item__text">
+              <h3>Speed-To-Lead Review</h3>
+              <p>See how fast your business responds when customers reach out.</p>
+            </div>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="14" rx="2" stroke="#11C5D9" stroke-width="1.5"/><path d="M2 7h18M6 17v2M16 17v2M8 19h6" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="audit-item__text">
+              <h3>Website + Booking Flow Mockup</h3>
+              <p>See how your site could collect job details and help customers book.</p>
+            </div>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 5h14M4 9h10M4 13h12M4 17h7" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/><circle cx="17" cy="15" r="3.5" stroke="#11C5D9" stroke-width="1.25"/><path d="M15.5 15l1 1 2-2" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="audit-item__text">
+              <h3>Fix-First Roadmap</h3>
+              <p>Know what to fix first for the fastest improvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WEBSITE FLOW
+    ============================================================ -->
+    <section class="funnel section section--flow" id="how-it-works">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">How It Works</p>
+        <h2 class="heading--center">Your Website Should<br>Help Book Jobs</h2>
+        <p class="section-body section-body--center">
+          Most websites just sit there. Yours should collect job details, answer basic questions, and help customers book.
+        </p>
+
+        <div class="funnel__flow">
+          <div class="funnel__node">
+            <div class="funnel__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="4" stroke="#11C5D9" stroke-width="1.5"/><path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="funnel__label">Visitor Lands<br>On Site</p>
+            <p class="funnel__sub">Any source</p>
+          </div>
+          <div class="funnel__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M12 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="funnel__node">
+            <div class="funnel__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8h20v14H4z" stroke="#11C5D9" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V5M19 8V5M4 13h20" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="funnel__label">Picks A<br>Service</p>
+            <p class="funnel__sub">HVAC, plumbing, etc.</p>
+          </div>
+          <div class="funnel__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M12 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="funnel__node">
+            <div class="funnel__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 5h20v18H4z" stroke="#11C5D9" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 11h10M9 15h7M9 19h5" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="funnel__label">Answers Job<br>Questions</p>
+            <p class="funnel__sub">Issue, timeline, city</p>
+          </div>
+          <div class="funnel__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M12 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="funnel__node">
+            <div class="funnel__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="5" width="20" height="18" rx="2" stroke="#11C5D9" stroke-width="1.5"/><path d="M9 3v4M19 3v4M4 12h20" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="funnel__label">Books A<br>Call</p>
+            <p class="funnel__sub">Date + time confirmed</p>
+          </div>
+          <div class="funnel__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M12 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="funnel__node funnel__node--active">
+            <div class="funnel__icon funnel__icon--active">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14.5l6 6L23 8" stroke="#070B0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="funnel__label">Job Info<br>Gets Saved</p>
+            <p class="funnel__sub">Ready to call</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         KNOW THE JOB
+    ============================================================ -->
+    <section class="qualify section" id="qualify">
+      <div class="container qualify__inner">
+        <div class="qualify__text">
+          <p class="eyebrow">Customer Intake</p>
+          <h2>Know The Job<br>Before You Call Back</h2>
+          <p class="section-body">
+            Ask the right questions first, so you know the job, location, and timing before you call.
+          </p>
+          <p class="qualify__note">Less guessing. Better calls. Faster booking.</p>
+        </div>
+
+        <div class="qualify__visual">
+          <div class="qualify-form">
+            <div class="qualify-form__header">
+              <div class="qualify-form__dot qualify-form__dot--red"></div>
+              <div class="qualify-form__dot qualify-form__dot--yellow"></div>
+              <div class="qualify-form__dot qualify-form__dot--green"></div>
+              <span>Book A Service Call</span>
+            </div>
+            <div class="qualify-form__steps">
+              <div class="qualify-step qualify-step--done">
+                <span class="qualify-step__num">1</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__label">What service do you need?</p>
+                  <p class="qualify-step__val">HVAC Repair</p>
+                </div>
+                <span class="qualify-step__check">✓</span>
+              </div>
+              <div class="qualify-step qualify-step--done">
+                <span class="qualify-step__num">2</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__label">What's the issue?</p>
+                  <p class="qualify-step__val">No heat in the house</p>
+                </div>
+                <span class="qualify-step__check">✓</span>
+              </div>
+              <div class="qualify-step qualify-step--done">
+                <span class="qualify-step__num">3</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__label">Where is the job?</p>
+                  <p class="qualify-step__val">Denver, CO</p>
+                </div>
+                <span class="qualify-step__check">✓</span>
+              </div>
+              <div class="qualify-step qualify-step--done">
+                <span class="qualify-step__num">4</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__label">When do you need help?</p>
+                  <p class="qualify-step__val">This week</p>
+                </div>
+                <span class="qualify-step__check">✓</span>
+              </div>
+              <div class="qualify-step qualify-step--active">
+                <span class="qualify-step__num qualify-step__num--active">5</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__label">Best time to call?</p>
+                  <p class="qualify-step__val qualify-step__val--active">Morning preferred</p>
+                </div>
+              </div>
+              <div class="qualify-step qualify-step--cta">
+                <span class="qualify-step__num qualify-step__num--cta">→</span>
+                <div class="qualify-step__body">
+                  <p class="qualify-step__val qualify-step__val--cta">Call Booked ✓</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SYSTEM PIPELINE
+    ============================================================ -->
+    <section class="system section section--deep" id="system">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">Our System</p>
+        <h2 class="heading--center">The System That<br>Turns Leads Into Jobs</h2>
+        <p class="section-body section-body--center">
+          New lead comes in. The system replies, follows up, and helps book the job.
+        </p>
+
+        <div class="pipeline">
+          <div class="pipeline__step">
+            <div class="pipeline__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="10" r="5" stroke="#11C5D9" stroke-width="1.75"/><path d="M5 26c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pipeline__label">Lead<br>Comes In</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M14 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="pipeline__step">
+            <div class="pipeline__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M4 5h22v16H4z" stroke="#11C5D9" stroke-width="1.75" stroke-linejoin="round"/><path d="M4 11h22M10 21v3M20 21v3" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pipeline__label">Instant<br>Reply</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M14 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="pipeline__step">
+            <div class="pipeline__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M4 5h22v18H4z" stroke="#11C5D9" stroke-width="1.75" stroke-linejoin="round"/><path d="M9 12h12M9 17h8" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pipeline__label">Job<br>Details</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M14 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="pipeline__step">
+            <div class="pipeline__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="4" y="5" width="22" height="20" rx="2" stroke="#11C5D9" stroke-width="1.75"/><path d="M10 3v4M20 3v4M4 13h22" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pipeline__label">Call<br>Booked</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M14 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="pipeline__step">
+            <div class="pipeline__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M6 15a9 9 0 1 1 9 9" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/><path d="M10 20l-4 4M6 20l4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pipeline__label">Follow-Up</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M14 7l4 4-4 4" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div class="pipeline__step pipeline__step--final">
+            <div class="pipeline__icon pipeline__icon--active">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M5 15.5l6 6 14-14" stroke="#070B0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pipeline__label">Job<br>Scheduled</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         OFFICE WITHOUT OVERHEAD
+    ============================================================ -->
+    <section class="overhead section section--calm" id="office">
+      <div class="container overhead__inner">
+        <div class="overhead__text">
+          <p class="eyebrow">More Power, Less Overhead</p>
+          <h2>An Office Without<br>The Overhead</h2>
+          <p class="section-body">
+            Get the power of a receptionist, booking helper, and follow-up system — without hiring extra staff.
+          </p>
+        </div>
+
+        <div class="overhead__cards">
+          <div class="card">
+            <div class="card__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M4 5h22v18H4z" stroke="#11C5D9" stroke-width="1.75" stroke-linejoin="round"/><path d="M4 11h22M11 23v3M19 23v3" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Fast Replies</h3>
+            <p>Answer before they call someone else.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="4" y="4" width="22" height="22" rx="2" stroke="#11C5D9" stroke-width="1.75"/><path d="M10 3v4M20 3v4M4 13h22" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/><path d="M10 19h3M10 23h7" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Booking Help</h3>
+            <p>Turn job details into booked calls.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="11" stroke="#11C5D9" stroke-width="1.75"/><path d="M15 5v10l7 3.5" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Follow-Up System</h3>
+            <p>Stay on leads until they answer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FIRST TO RESPOND WINS
+    ============================================================ -->
+    <section class="respond section section--dark" id="respond">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">The Reality</p>
+        <h2 class="heading--center">First To Respond Wins</h2>
+
+        <div class="respond__stat-row">
+          <span class="respond__pct">78%</span>
+          <p class="respond__stat-text">Shared leads move fast.<br>The first call usually wins.</p>
+        </div>
+
+        <!-- Desktop: full race -->
+        <div class="race race--desktop">
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Lead<br>Posted</p>
+          </div>
+          <div class="race__connector"></div>
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Contractor<br>1</p>
+          </div>
+          <div class="race__connector"></div>
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Contractor<br>2</p>
+          </div>
+          <div class="race__connector race__connector--active"></div>
+          <div class="race__step race__step--active">
+            <div class="race__icon race__icon--active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="#070B0F" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="#070B0F" stroke-width="1.5"/></svg></div>
+            <p>Ironclad<br>Responds First</p>
+          </div>
+          <div class="race__connector"></div>
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Contractor<br>4</p>
+          </div>
+          <div class="race__connector"></div>
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Contractor<br>5</p>
+          </div>
+          <div class="race__connector race__connector--active"></div>
+          <div class="race__step race__step--booked">
+            <div class="race__icon race__icon--booked"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12l5.5 5.5L20 7" stroke="#11C5D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p>Job<br>Booked</p>
+          </div>
+        </div>
+
+        <!-- Mobile: simplified 4 nodes -->
+        <div class="race race--mobile">
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Lead<br>Posted</p>
+          </div>
+          <div class="race__connector"></div>
+          <div class="race__step race__step--muted">
+            <div class="race__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <p>Contractor</p>
+          </div>
+          <div class="race__connector race__connector--active"></div>
+          <div class="race__step race__step--active">
+            <div class="race__icon race__icon--active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21v-1a8 8 0 0 1 16 0v1" stroke="#070B0F" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="4.5" stroke="#070B0F" stroke-width="1.5"/></svg></div>
+            <p>Ironclad<br>First</p>
+          </div>
+          <div class="race__connector race__connector--active"></div>
+          <div class="race__step race__step--booked">
+            <div class="race__icon race__icon--booked"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12l5.5 5.5L20 7" stroke="#11C5D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p>Job<br>Booked</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY IRONCLAD
+    ============================================================ -->
+    <section class="why section section--calm" id="why-ironclad">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">Why Ironclad</p>
+        <h2 class="heading--center">Why Ironclad</h2>
+        <div class="why__cards">
+          <div class="card card--why">
+            <div class="card__icon card__icon--lg">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M6 11l5-5h12l5 5v12l-5 5H11l-5-5V11z" stroke="#11C5D9" stroke-width="1.75" stroke-linejoin="round"/><path d="M11 20l3 3 9-9" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Built For Contractors</h3>
+            <p>Made for calls, jobs, and real work.</p>
+          </div>
+          <div class="card card--why">
+            <div class="card__icon card__icon--lg">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="12" stroke="#11C5D9" stroke-width="1.75"/><path d="M11 17l4.5 4.5 8-8" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Simple Systems</h3>
+            <p>Easy to use. Built to save time.</p>
+          </div>
+          <div class="card card--why">
+            <div class="card__icon card__icon--lg">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="12" stroke="#11C5D9" stroke-width="1.75"/><path d="M12 17l4 4 6-7" stroke="#11C5D9" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>No Marketing Fluff</h3>
+            <p>Just faster replies and better follow-up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HUMAN TRUST
+    ============================================================ -->
+    <section class="trust section section--warm" id="trust">
+      <div class="container trust__inner">
+        <div class="trust__text">
+          <p class="eyebrow">Founder</p>
+          <h2>Built By A Tradesman,<br>For Tradesmen</h2>
+          <div class="trust__story">
+            <p>I spent over 6 years as an independent electrician. I know what it's like to be on a job, miss a call, forget to follow up, only to find out they booked someone else.</p>
+            <p>And we all know that lead didn't come cheap.</p>
+            <p>That's why I built Ironclad — to help contractors reply faster, stay organized, and book more work without hiring more office staff.</p>
+            <p class="trust__attribution">— Nathan Jacob</p>
+          </div>
+          <div class="proof-badges">
+            <div class="proof-badge">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 5.5l4-4h6l4 4v7l-4 4H6l-4-4V5.5z" stroke="#11C5D9" stroke-width="1.25" stroke-linejoin="round"/><path d="M6 11l2 2 4-4" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Built from real jobsite experience
+            </div>
+            <div class="proof-badge">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1H3V5z" stroke="#11C5D9" stroke-width="1.25" stroke-linejoin="round"/><path d="M3 6h12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z" stroke="#11C5D9" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 10l1.5 1.5 3-3" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Made to stop missed opportunities
+            </div>
+            <div class="proof-badge">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#11C5D9" stroke-width="1.25"/><path d="M5.5 9l2.5 2.5 5-5" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              No agency fluff — just better follow-up
+            </div>
+          </div>
+        </div>
+
+        <div class="trust__visual">
+          <div class="trust__img-wrap">
+            <div class="trust__img" aria-hidden="true"></div>
+            <div class="trust__img-overlay" aria-hidden="true"></div>
+            <div class="trust__img-badge">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4c0 3.59 2.58 6.95 6 7.73C11.42 14.95 14 11.59 14 8V4L8 1z" fill="#11C5D9" fill-opacity="0.2" stroke="#11C5D9" stroke-width="1.25"/><path d="M5.5 8l2 2 3.5-3.5" stroke="#11C5D9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              6+ years in the field
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FIELD-TESTED — Built For Real Contractor Work
+    ============================================================ -->
+    <section class="field section section--field" id="field">
+      <div class="container">
+        <p class="eyebrow eyebrow--center">What We Solve</p>
+        <h2 class="heading--center">Built For Real<br>Contractor Work</h2>
+        <p class="section-body section-body--center">
+          Missed calls. Slow follow-up. Booking gaps. Customer updates.
+          This system is built around the problems contractors deal with every day.
+        </p>
+
+        <div class="field-cards">
+          <div class="field-card">
+            <div class="field-card__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 5a18 18 0 0 0 18 18l1.5-1.5-3.5-3.5-1.5 1c-1.6-.9-4-3.3-5-5l1-1.5-3.5-3.5L9.5 10z" fill="#11C5D9" opacity="0.8"/></svg>
+            </div>
+            <h3>Missed Call Text Back</h3>
+            <p>Reply when you can't answer.</p>
+          </div>
+          <div class="field-card">
+            <div class="field-card__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="4" width="22" height="20" rx="2" stroke="#11C5D9" stroke-width="1.5"/><path d="M8 2v4M20 2v4M3 12h22" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/><path d="M8 18h3M8 22h6" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Booking Reminders</h3>
+            <p>Keep customers on schedule.</p>
+          </div>
+          <div class="field-card">
+            <div class="field-card__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14a7 7 0 1 1 7 7" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/><path d="M11 19l-4 4M7 19l4 4" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Lead Follow-Up</h3>
+            <p>Stay in touch until they book.</p>
+          </div>
+          <div class="field-card">
+            <div class="field-card__icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 5h20v14H4z" stroke="#11C5D9" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 10h20M9 19v3M19 19v3" stroke="#11C5D9" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Customer Updates</h3>
+            <p>Keep people informed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+    ============================================================ -->
+    <section class="final-cta" id="contact">
+      <div class="final-cta__bg" aria-hidden="true"></div>
+      <div class="final-cta__overlay" aria-hidden="true"></div>
+      <div class="container final-cta__inner">
+        <p class="eyebrow eyebrow--center">Get Started</p>
+        <h2>Ready To Stop Losing Jobs?</h2>
+        <p class="final-cta__sub">Book a free audit and see where jobs are slipping through your system.</p>
+        <a href="#contact" class="btn btn--primary btn--cta">
+          Book Free Audit
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h14M13 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <p class="footer__desc">We help contractors get more calls, book more jobs, and grow their business.</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.2.3-2 2-2H17V2.2C16.7 2.1 15.6 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zM4 10h4v10H4zM10 10h4v1.5c.7-1 2-1.7 3.5-1.7 2.7 0 4.5 1.7 4.5 5V20h-4v-4.6c0-1.4-.6-2.4-2-2.4s-2 1-2 2.4V20h-4V10z"/></svg></a>
-        </div>
+        <p class="final-cta__note">No pressure. Just a clear look at what's costing you jobs.</p>
       </div>
+    </section>
 
-      <div>
-        <div class="footer__title">Navigation</div>
-        <ul class="footer__list">
-          <li><a href="#system">Our System</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why">About</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo footer__logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2L4 8v8c0 7.18 5.16 13.9 12 15.46C22.84 29.9 28 23.18 28 16V8L16 2z" fill="#11C5D9" fill-opacity="0.15" stroke="#11C5D9" stroke-width="1.5"/>
+            <path d="M11 16l3.5 3.5L21 12" stroke="#11C5D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>IRONCLAD<span class="nav__logo-sub">DIGITAL</span></span>
+        </a>
+        <p class="footer__tagline">AI systems. Real results. More jobs.</p>
       </div>
-
-      <div>
-        <div class="footer__title">Services</div>
-        <ul class="footer__list">
-          <li><a href="#">Conversion Optimization</a></li>
-          <li><a href="#">Automation Systems</a></li>
-          <li><a href="#">Google Ads</a></li>
-          <li><a href="#">Search Visibility</a></li>
-          <li><a href="#">CRM Automation</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer__title">Service Areas</div>
-        <ul class="footer__list">
-          <li>San Diego, CA</li>
-          <li>Chula Vista, CA</li>
-          <li>Carlsbad, CA</li>
-          <li>Poway, CA</li>
-          <li>Surrounding Areas</li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer__title">Contact</div>
-        <ul class="footer__list">
-          <li><a href="tel:+19516913895">(951) 691-3895</a></li>
-          <li><a href="mailto:ironcladleadsystems@gmail.com">ironcladleadsystems@gmail.com</a></li>
-          <li><a href="book.html">Schedule a Call</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer__bottom">
-      <span>© <span id="year"></span> Ironclad Digital. All rights reserved.</span>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#system">Systems</a>
+        <a href="#why-ironclad">Why Ironclad</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <div class="footer__legal">
         <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="terms-and-conditions.html">Terms</a>
+        <span>© 2024 Ironclad Digital. All rights reserved.</span>
       </div>
-      <span>San Diego, CA</span>
     </div>
   </footer>
 
