@@ -66,6 +66,18 @@
   color: var(--muted);
   letter-spacing: 0.02em;
 }
+.fnl-header__note--cta {
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid rgba(17,197,217,0.35);
+  border-radius: 100px;
+  padding: 6px 14px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.fnl-header__note--cta:hover {
+  background: rgba(17,197,217,0.1);
+  border-color: var(--teal);
+}
 
 .fnl-exit {
   display: inline-flex;
