@@ -479,20 +479,62 @@
       sliderInput.value = answers[step.field] || step.min;
       sliderInput.setAttribute('aria-label', step.question);
 
+      function updateSliderFill(el) {
+        var min = parseFloat(el.min);
+        var max = parseFloat(el.max);
+        var val = parseFloat(el.value);
+        var pct = ((val - min) / (max - min)) * 100;
+        el.style.background = 'linear-gradient(to right, var(--teal) 0%, var(--teal) ' + pct + '%, var(--divider) ' + pct + '%, var(--divider) 100%)';
+      }
+
       var display = document.createElement('div');
       display.className = 'slider-display';
-      var displayVal = document.createElement('span');
-      displayVal.className = 'slider-display__val';
-      displayVal.textContent = sliderInput.value;
+      var displayInput = document.createElement('input');
+      displayInput.type = 'number';
+      displayInput.className = 'slider-display__val slider-display__val--input';
+      displayInput.value = sliderInput.value;
+      displayInput.min = step.min;
+      displayInput.max = step.max;
+      displayInput.step = step.step;
       var displayUnit = document.createElement('span');
       displayUnit.className = 'slider-display__unit';
       displayUnit.textContent = step.unit;
-      display.appendChild(displayVal);
+      display.appendChild(displayInput);
       display.appendChild(displayUnit);
+
+      updateSliderFill(sliderInput);
 
       sliderInput.addEventListener('input', function () {
         answers[step.field] = parseFloat(sliderInput.value);
-        displayVal.textContent = sliderInput.value;
+        displayInput.value = sliderInput.value;
+        updateSliderFill(sliderInput);
+        updateHint(step);
+        updateNextState(step);
+      });
+
+      displayInput.addEventListener('input', function () {
+        var v = parseFloat(displayInput.value);
+        if (!isNaN(v)) {
+          var clamped = Math.min(Math.max(v, parseFloat(step.min)), parseFloat(step.max));
+          sliderInput.value = clamped;
+          answers[step.field] = clamped;
+          updateSliderFill(sliderInput);
+          updateHint(step);
+          updateNextState(step);
+        }
+      });
+
+      displayInput.addEventListener('blur', function () {
+        var v = parseFloat(displayInput.value);
+        if (isNaN(v) || v < parseFloat(step.min)) {
+          displayInput.value = step.min;
+          sliderInput.value = step.min;
+        } else if (v > parseFloat(step.max)) {
+          displayInput.value = step.max;
+          sliderInput.value = step.max;
+        }
+        answers[step.field] = parseFloat(sliderInput.value);
+        updateSliderFill(sliderInput);
         updateHint(step);
         updateNextState(step);
       });
