@@ -239,7 +239,7 @@
     biggestLeaks: [], biggestLeakOther: '',
     hasWebsite: '', hasWebsiteBooking: '',
     fullName: '', businessName: '', phone: '', email: '', websiteUrl: '', serviceArea: '',
-    smsConsent: false,
+    smsConsent: false, smsMarketing: false,
     // calculated values
     currentBookedJobs: 0,
     currentEstimatedLeadRevenue: 0,
@@ -937,6 +937,7 @@
     answers.websiteUrl = val('websiteUrl');
     answers.serviceArea = val('serviceArea');
     answers.smsConsent = !!contactForm.elements['smsConsent'].checked;
+    answers.smsMarketing = !!contactForm.elements['smsMarketing'].checked;
 
     calculateEstimate();
 
@@ -1476,6 +1477,7 @@
       },
       consent: {
         smsConsent: answers.smsConsent,
+        smsMarketing: answers.smsMarketing,
         timestamp: new Date().toISOString()
       },
       meta: {

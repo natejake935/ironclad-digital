@@ -117,9 +117,6 @@ function validatePayload(payload) {
     return 'Invalid contact method.';
   }
 
-  // --- Consent ---
-  if (!consent?.granted) return 'You must agree to be contacted.';
-
   return null;
 }
 
