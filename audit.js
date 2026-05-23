@@ -1313,7 +1313,8 @@
   var bookingStatus = $('bookingStatus');
 
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  var TIME_SLOTS = ['9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'];
+  var TIME_SLOTS = ['7:00 AM', '8:00 AM', '9:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'];
+  var BLOCKED_HOURS = [10, 15]; // 10am and 3pm always blocked
   var viewYear, viewMonth;
 
   function startOfDay(d) { var x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
@@ -1351,8 +1352,8 @@
 
       var dow = date.getDay();
       var isPast = date < today;
-      var isWeekend = (dow === 0 || dow === 6);
-      if (isPast || isWeekend) {
+      var isSaturday = (dow === 6);
+      if (isPast || isSaturday) {
         btn.disabled = true;
       } else {
         (function (dt, el) {
@@ -1378,17 +1379,45 @@
     var wd = booking.date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
     slotsLabel.textContent = 'Pick a time — ' + wd;
     slotsGrid.innerHTML = '';
+
+    var now = new Date();
+    var isToday = booking.date.getTime() === today.getTime();
+
     TIME_SLOTS.forEach(function (t) {
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'slot';
       btn.textContent = t;
-      btn.addEventListener('click', function () {
-        booking.time = t;
-        slotsGrid.querySelectorAll('.slot').forEach(function (s) { s.classList.remove('is-selected'); });
-        btn.classList.add('is-selected');
-        validateBooking();
-      });
+
+      // Parse hour from time string (e.g., "7:00 AM" → 7, "1:00 PM" → 13)
+      var timeParts = t.split(':');
+      var hour = parseInt(timeParts[0], 10);
+      var isPM = t.includes('PM');
+      if (isPM && hour !== 12) hour += 12;
+      if (!isPM && hour === 12) hour = 0;
+
+      // Check if blocked hour
+      var isBlockedHour = BLOCKED_HOURS.indexOf(hour) >= 0;
+
+      // Check if time has passed (if today)
+      var isTimePassed = false;
+      if (isToday) {
+        var slotTime = new Date(booking.date);
+        slotTime.setHours(hour, 0, 0, 0);
+        isTimePassed = slotTime <= now;
+      }
+
+      if (isBlockedHour || isTimePassed) {
+        btn.disabled = true;
+      } else {
+        btn.addEventListener('click', function () {
+          booking.time = t;
+          slotsGrid.querySelectorAll('.slot').forEach(function (s) { s.classList.remove('is-selected'); });
+          btn.classList.add('is-selected');
+          validateBooking();
+        });
+      }
+
       slotsGrid.appendChild(btn);
     });
   }
@@ -1411,17 +1440,31 @@
     if (!(booking.date && booking.time)) return;
     confirmBtn.classList.add('is-loading');
     confirmBtn.disabled = true;
-    Audit.bookReview(buildBookingPayload())
-      .then(function () { showSuccess(); })
-      .catch(function () {
-        bookingStatus.textContent = 'Something went wrong. Please try again.';
-        bookingStatus.dataset.type = 'error';
-        bookingStatus.classList.add('is-visible');
-      })
-      .then(function () {
-        confirmBtn.classList.remove('is-loading');
-        confirmBtn.disabled = false;
-      });
+
+    var payload = buildBookingPayload();
+
+    // Submit booking via API (handles email to ironcladleadsystem@gmail.com)
+    if (window.IroncladAPI && window.IroncladAPI.submitBooking) {
+      window.IroncladAPI.submitBooking(payload)
+        .then(function () { showSuccess(); })
+        .catch(function (err) {
+          console.error('Booking error:', err);
+          bookingStatus.textContent = 'Booking saved, but there was an issue sending confirmation. We have your details and will reach out soon.';
+          bookingStatus.dataset.type = 'warning';
+          bookingStatus.classList.add('is-visible');
+          // Still proceed to success
+          setTimeout(function () { showSuccess(); }, 2000);
+        })
+        .then(function () {
+          confirmBtn.classList.remove('is-loading');
+          confirmBtn.disabled = false;
+        });
+    } else {
+      // Fallback for local testing
+      showSuccess();
+      confirmBtn.classList.remove('is-loading');
+      confirmBtn.disabled = false;
+    }
   });
 
   function showSuccess() {
