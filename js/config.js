@@ -14,8 +14,9 @@ window.IRONCLAD_CONFIG = Object.freeze({
   // Base URL of the backend API.
   // Local dev: 'http://localhost:3001'
   // Production: 'https://api.ironcladdigital.agency'
+  // Staging: 'https://staging-api.ironcladdigital.agency'
   // Leave empty to run in mock mode (no server needed — useful for design preview).
-  apiBaseUrl: 'https://api.ironcladdigital.agency',
+  apiBaseUrl: 'https://staging-api.ironcladdigital.agency',
 
   // Endpoints relative to apiBaseUrl.
   endpoints: {
@@ -25,7 +26,7 @@ window.IRONCLAD_CONFIG = Object.freeze({
 
   // Public API key sent with requests (safe to expose in browser).
   // Server validates origin + rate-limits in addition to this.
-  publicApiKey: '65c859b7b8f2aa055ade8c9d500b72db1a304c300259f36cc3073decb3e3e487',
+  publicApiKey: '5b71fcec877165db829d72cadf1eac243096489c3905364d1c7695b87d000ffe',
 
   // ---------- Behavior ----------
   // When true, the API client logs request/response to console.
@@ -39,8 +40,8 @@ window.IRONCLAD_CONFIG = Object.freeze({
   // backend is expected to fan out to. The browser never talks
   // to these services directly.
   serverIntegrations: {
-    sms: 'twilio',          // automated text notification (server/services/sms.js)
-    email: 'twilio',        // automated email notification (server/services/email.js)
-    crm: 'hubspot',         // CRM record + pipeline stage update (server/services/crm.js)
+    sms: 'telnyx',          // automated text notification (api-core/services/sms.js)
+    email: 'telnyx',        // automated email notification (api-core/services/email.js)
+    crm: 'gohighlevel',     // CRM record + pipeline stage update (api-core/services/crm.js)
   },
 });

@@ -209,9 +209,19 @@
           </div>
           <h2 class="book-success__title">Request Received.</h2>
           <p class="book-success__text">
-            Your details are in. We'll reach out within <strong>1 business hour</strong> via your preferred contact method to lock in your strategy call.
+            Your details are in. Pick a time below that works for you — we'll confirm within 1 hour.
           </p>
-          <a href="index.html" class="btn btn--ghost">Return Home</a>
+          <!-- GHL Calendar embed — "Strategy Call" (30 min) -->
+          <div class="book-calendar">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/YGM6ksl9MHj4zkNqdUuL"
+              style="width:100%;border:none;overflow:hidden;min-height:680px"
+              scrolling="no"
+              id="msgsndr-calendar"
+              title="Schedule your strategy call"
+            ></iframe>
+          </div>
+          <a href="index.html" class="btn btn--ghost" style="margin-top:1rem">Return Home</a>
         </div>
       </div>
 
@@ -351,5 +361,6 @@
   <script src="js/api.js"></script>
   <script src="script.js"></script>
   <script src="js/booking.js"></script>
+  <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
 </body>
 </html>
